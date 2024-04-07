@@ -1,0 +1,62 @@
+{
+  "name": "metabot",
+  "description": "Metabot, developed by Meta2150s, where social interaction converges with blockchain technology for an immersive and rewarding adventure. Leveraging X's robust social features to seamlessly integrate SocialFi.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "img/icon-logo.png",
+    "24": "img/icon-logo.png",
+    "32": "img/icon-logo.png",
+    "48": "img/icon-logo.png",
+    "128": "img/icon-logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "img/icon-logo.png"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/metabot.js-loader-e4ed4ddc.js"
+      ],
+      "matches": [
+        "https://twitter.com/*",
+        "https://api.tstt.xyz/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://api.tstt.xyz/*",
+        "https://twitter.com/*"
+      ],
+      "resources": [
+        "img/**"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://api.tstt.xyz/*",
+        "https://twitter.com/*"
+      ],
+      "resources": [
+        "assets/chunk-0caea996.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://twitter.com/*",
+    "https://api.tstt.xyz/*"
+  ]
+}
