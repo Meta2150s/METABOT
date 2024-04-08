@@ -16,11 +16,17 @@
 **Necessary environment for the project**
 
 oracle jdk 8
+
 mysql 5.7
+
 redis 5.X
+
 minio or cloud storage that supports S3 protocol
+
 maven 3.6.3 3.8.X
+
 nodejs >= 12 < 18
+
 npm 6.X 8.X
 
 - Game front end
