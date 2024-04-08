@@ -1,5 +1,15 @@
 # METABOT
 
+> How to play this game?
+
+  1. First you need to install the chrome browser.
+  2. Then find and open the chrome browser extension.
+  3. Then open the developer mode of the chrome extension.
+  4. Then select the `web-game-chrome` folder and load it.
+  5. At this time, you can open the game (MetaBot) interface in the chrome plug-in bar and interact with twitter Bind login.
+  6. You may need an invitation code, you can use the official invitation code (`FUJ91VGLQV`).
+  7. Finally, you can enter the game, let’s get started!
+
 > File directory introduction
 
 | file | description |
@@ -29,15 +39,22 @@ nodejs >= 12 < 18
 
 npm 6.X 8.X
 
-- Game front end
+- Solana-chain
 
-  You first need to install the chrome browser, then open the developer mode of the chrome extension, then select the `web-game-chrome` folder and load it. At this time, you can open the game (metabot) interface in the chrome plug-in bar and interact with twitter Bind login, you may need an invitation code (`dUXznNJcVa`)
+  Running the node service is very easy. You only need to execute `npm i`, and then execute `npm run dev` to start the service.
+
+- Solana-tool
+
+  Similarly, you must first execute `npm i`, and then execute `node index.js` to start the service. 
+  
+  You can also use `pm2 start index.js --name solana-chain` to mount the background process for execution.
 
 - Game backend
 
    - jar
 
      You need to execute `run.sh start` on the linux system,
+     
      You can also execute `run.sh stop` or `run.sh` status to better control the running of the `metabot-admin.jar`.
 
      The default port for startup is 8080
